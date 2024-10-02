@@ -1,18 +1,23 @@
 // Parent class
 class Animal {
+    #name;
     constructor(name) {
-        this.name = name;
+        this.#name = name;
     }
 
     speak() {
-        return `${this.name} makes a sound.`;
+        return `${this.#name} makes a sound.`;
+    }
+
+    getName() {
+        return this.#name;
     }
 }
 
 // Child class inheriting from Animal
 class Dog extends Animal {
     dogspeak() {
-        return `${this.name} barks.`;
+        return `${this.getName()} barks.`;
     }
 }
 
