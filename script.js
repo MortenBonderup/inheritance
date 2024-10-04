@@ -16,6 +16,9 @@ class Animal {
 
 // Child class inheriting from Animal
 class Dog extends Animal {
+    constructor(name) {
+        super(name);
+    }
     dogspeak() {
         return `${this.getName()} barks.`;
     }
